@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michael Jan Orillo — Growth Marketer</title>
+<meta name="description" content="Growth marketer working across organic search, partner outreach and AI content production for subscription software.">
+<style>
+  :root{
+    --bg:#fbfcf7; --card:#ffffff; --ink:#16222e; --muted:#5d6b78; --faint:#8b98a5;
+    --accent:#0f8a4d; --line:#e6e9e4; --shadow:0 1px 3px rgba(22,34,46,.06),0 8px 24px rgba(22,34,46,.05);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#10171d; --card:#161f27; --ink:#e8edf1; --muted:#9aa8b5; --faint:#71808d;
+      --accent:#2fbd76; --line:#243039; --shadow:0 1px 3px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);}
+  }
+  :root[data-theme="dark"]{--bg:#10171d;--card:#161f27;--ink:#e8edf1;--muted:#9aa8b5;--faint:#71808d;
+    --accent:#2fbd76;--line:#243039;--shadow:0 1px 3px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);}
+  :root[data-theme="light"]{--bg:#fbfcf7;--card:#ffffff;--ink:#16222e;--muted:#5d6b78;--faint:#8b98a5;
+    --accent:#0f8a4d;--line:#e6e9e4;--shadow:0 1px 3px rgba(22,34,46,.06),0 8px 24px rgba(22,34,46,.05);}
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font:400 16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;padding:0 20px}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 0 80px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* header */
+  header{padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:44px}
+  h1{font-size:clamp(30px,5vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .role{color:var(--accent);font-weight:600;font-size:15px;letter-spacing:.08em;
+    text-transform:uppercase;margin-top:12px}
+  .meta{color:var(--muted);font-size:14.5px;margin-top:16px}
+  .meta span{white-space:nowrap}
+  .sep{color:var(--faint);margin:0 8px}
+  .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .links a{display:inline-block;border:1px solid var(--line);border-radius:999px;
+    padding:6px 15px;font-size:13.5px;font-weight:600;color:var(--ink);background:var(--card)}
+  .links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  .lede{font-size:18px;line-height:1.65;color:var(--muted);max-width:64ch}
+  .lede strong{color:var(--ink);font-weight:600}
+
+  h2{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);margin:56px 0 22px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px}
+  .pillar h3{font-size:15.5px;font-weight:700;margin-bottom:7px}
+  .pillar p{font-size:14.5px;color:var(--muted);line-height:1.6}
+
+  /* case cards */
+  .case{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:14px;padding:26px 28px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .eyebrow{color:var(--accent);font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+  .case h3{font-size:21px;font-weight:700;letter-spacing:-.01em;margin:9px 0 20px;line-height:1.25}
+  .stats{display:flex;flex-wrap:wrap;gap:32px;padding:18px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:18px}
+  .stat b{display:block;font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .stat span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
+  .case ul{list-style:none}
+  .case li{position:relative;padding-left:19px;margin-bottom:9px;font-size:14.5px;
+    color:var(--muted);line-height:1.6}
+  .case li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;
+    border-radius:50%;background:var(--accent)}
+  .note{font-size:12.5px;color:var(--faint);margin-top:14px;font-style:italic}
+  .case figure{margin-top:20px}
+  .case img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:9px}
+
+  /* experience */
+  .job{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:17px 0;border-bottom:1px solid var(--line)}
+  .job:last-child{border-bottom:0}
+  .job .when{font-size:13px;color:var(--faint);padding-top:2px}
+  .job h3{font-size:16px;font-weight:700}
+  .job .org{font-size:14px;color:var(--accent);font-weight:600;margin-top:2px}
+  .job p{font-size:14.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+  /* stack */
+  .stack-row{display:grid;grid-template-columns:170px 1fr;gap:22px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .stack-row:last-child{border-bottom:0}
+  .stack-row dt{font-size:13.5px;font-weight:700}
+  .stack-row dd{font-size:14.5px;color:var(--muted);line-height:1.65}
+
+  /* contact */
+  .cta{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:32px;text-align:center;box-shadow:var(--shadow);margin-top:22px}
+  .cta h3{font-size:22px;font-weight:700;letter-spacing:-.01em}
+  .cta p{color:var(--muted);margin:9px 0 20px;font-size:15px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:15px;
+    padding:12px 30px;border-radius:999px}
+  .btn:hover{opacity:.9;text-decoration:none}
+
+  footer{margin-top:52px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--faint);text-align:center}
+
+  @media(max-width:620px){
+    .wrap{padding:40px 0 60px}
+    .job,.stack-row{grid-template-columns:1fr;gap:5px}
+    .stats{gap:22px}
+    .case{padding:22px 20px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Michael Jan Orillo</h1>
+  <div class="role">Growth Marketer · SEO, Link Acquisition and AI Content</div>
+  <div class="meta">
+    <span>Calabanga, Camarines Sur, Philippines</span><span class="sep">·</span>
+    <span><a href="mailto:orillomichaeljan@gmail.com">orillomichaeljan@gmail.com</a></span><span class="sep">·</span>
+    <span>0976 558 5737</span>
+  </div>
+  <div class="links">
+    <a href="https://www.upwork.com/freelancers/~01e70d6933182d5a66" target="_blank" rel="noopener">Upwork</a>
+    <a href="https://www.linkedin.com/in/imjinir/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://v2.onlinejobs.ph/jobseekers/info/1871511" target="_blank" rel="noopener">OnlineJobs.ph</a>
+    <a href="mailto:orillomichaeljan@gmail.com">Email</a>
+  </div>
+</header>
+
+<p class="lede">
+  Civil engineer turned growth marketer. <strong>Three years across organic search, partner
+  outreach and AI content production</strong>, mostly for subscription software. I audit the search
+  baseline, build the link and affiliate pipeline that moves it, then produce the content that
+  fills it. I work in the numbers rather than around them, and I say so when the numbers do not
+  support the plan.
+</p>
+
+<h2>What I do</h2>
+<div class="pillars">
+  <div class="pillar">
+    <h3>Organic search</h3>
+    <p>Search Console and Ahrefs audits, page and keyword prioritisation, title and meta work,
+    indexing cleanup, disavow files and negative SEO defence.</p>
+  </div>
+  <div class="pillar">
+    <h3>Partner and affiliate growth</h3>
+    <p>Prospect research, outreach sequences and follow up, placement negotiation, and a tracker
+    that stays current so nobody has to ask where a deal stands.</p>
+  </div>
+  <div class="pillar">
+    <h3>AI content production</h3>
+    <p>Image and video generation with locked character consistency, AI voice, post production,
+    and written SOPs so the pipeline runs without me in the room.</p>
+  </div>
+</div>
+
+<h2>Selected work</h2>
+
+<div class="case">
+  <div class="eyebrow">Reporting and analysis</div>
+  <h3>Organic Search Audit and 12 Month Marketing Plan</h3>
+  <div class="stats">
+    <div class="stat"><b>144K</b><span>impressions reviewed</span></div>
+    <div class="stat"><b>10.8%</b><span>click through rate</span></div>
+    <div class="stat"><b>377</b><span>indexing issues found</span></div>
+  </div>
+  <ul>
+    <li>Pulled and interpreted the full Google Search Console baseline for xeve.ai</li>
+    <li>Found a single page carrying 65 percent of all organic traffic, and flagged the concentration risk</li>
+    <li>Turned the findings into a prioritised action list and a 12 month plan</li>
+  </ul>
+</div>
+
+<div class="case">
+  <div class="eyebrow">Search growth</div>
+  <h3>Link Acquisition and Spam Defence for xeve.ai</h3>
+  <div class="stats">
+    <div class="stat"><b>15.6K</b><span>monthly clicks at handover</span></div>
+    <div class="stat"><b>19.5</b><span>average starting position</span></div>
+    <div class="stat"><b>1</b><span>disavow file shipped</span></div>
+  </div>
+  <ul>
+    <li>Took over a profile at 15.6K monthly clicks and an average position of 19.5, and set the anchor target from the position data rather than from guesswork</li>
+    <li>Identified an active spam link campaign pointed at the domain, evidenced it, and built the disavow file</li>
+    <li>Prioritised new backlinks to the highest intent commercial page instead of the homepage</li>
+    <li>Set a policy of verifying a page's real organic traffic before paying it any attention, which removed most of the pitch list</li>
+  </ul>
+  <p class="note">Client: xeve.ai</p>
+</div>
+
+<div class="case">
+  <div class="eyebrow">Research and lead generation</div>
+  <h3>Partner and Affiliate Outreach Pipeline</h3>
+  <div class="stats">
+    <div class="stat"><b>60+</b><span>targets researched</span></div>
+    <div class="stat"><b>1</b><span>placement closed</span></div>
+    <div class="stat"><b>100%</b><span>tracked in Sheets</span></div>
+  </div>
+  <ul>
+    <li>Built and still maintain the tracker: metrics, contact status, terms and next action per row</li>
+    <li>Wrote the outreach template and ran every follow up sequence myself</li>
+    <li>Closed a review site placement that went live with a scored review</li>
+  </ul>
+</div>
+
+<div class="case">
+  <div class="eyebrow">Content operations</div>
+  <h3>Content Calendar and SOP for a Review Blog</h3>
+  <div class="stats">
+    <div class="stat"><b>211</b><span>posts scheduled</span></div>
+    <div class="stat"><b>1</b><span>written SOP</span></div>
+    <div class="stat"><b>0</b><span>hand holding needed</span></div>
+  </div>
+  <ul>
+    <li>Google Sheets calendar with topic, target keyword, publish date, status and owner</li>
+    <li>Written SOP covering research, AI assisted drafting, editing and publishing</li>
+    <li>Repurposing workflow that turns each post into social content</li>
+  </ul>
+</div>
+
+<div class="case">
+  <div class="eyebrow">Content production</div>
+  <h3>AI Image and Video Pipeline for Social Assets</h3>
+  <div class="stats">
+    <div class="stat"><b>1</b><span>locked reference</span></div>
+    <div class="stat"><b>9:16</b><span>post ready output</span></div>
+    <div class="stat"><b>Batch</b><span>generation via API</span></div>
+  </div>
+  <ul>
+    <li>Prompt template library so output stays on brand without re explaining it</li>
+    <li>Locked reference image keeps the same character consistent across every asset</li>
+    <li>Light editing and formatting so assets are ready to publish, not ready to fix</li>
+  </ul>
+</div>
+
+<div class="case">
+  <div class="eyebrow">Paid media</div>
+  <h3>Paid Acquisition Channel Study and Competitor Ad Forensics</h3>
+  <div class="stats">
+    <div class="stat"><b>110</b><span>competitor ads mapped</span></div>
+    <div class="stat"><b>0</b><span>budget spent testing</span></div>
+    <div class="stat"><b>1</b><span>buy stopped before spend</span></div>
+  </div>
+  <ul>
+    <li>Ranked every ad network open, conditional or closed for a client in an age restricted vertical, so the team stopped pitching channels that would reject the account</li>
+    <li>Reverse engineered the market leader's ad stack and found it running entirely through third party pages rather than its own brand</li>
+    <li>Killed a direct to subscription buy on the unit economics and redirected the objective to free registration instead</li>
+    <li>Gated any spend behind a conversion tracking fix, because the existing data could not have measured the result</li>
+  </ul>
+  <p class="note">Client: xeve.ai</p>
+</div>
+
+<div class="case">
+  <div class="eyebrow">Measurement</div>
+  <h3>Analytics Audit for xeve.ai</h3>
+  <div class="stats">
+    <div class="stat"><b>64%</b><span>key events unassigned</span></div>
+    <div class="stat"><b>0.00</b><span>revenue actually reported</span></div>
+    <div class="stat"><b>2</b><span>fixes specified</span></div>
+  </div>
+  <ul>
+    <li>Audited the GA4 property against what the business was actually billing</li>
+    <li>Found 64 percent of key events landing in Unassigned and revenue reporting at zero, which meant no channel could be credited honestly</li>
+    <li>Wrote up the two fixes required and made them a precondition for further acquisition spend</li>
+  </ul>
+  <p class="note">Client: xeve.ai</p>
+</div>
+
+<h2>Experience</h2>
+<div class="job">
+  <div class="when">Jun 2026 to present</div>
+  <div>
+    <h3>Growth Marketer</h3>
+    <div class="org">xeve.ai · Remote</div>
+    <p>Own organic search, partner and affiliate outreach, and content operations. Backlink and
+    disavow work, GA4 measurement audit, paid channel strategy, and a weekly reporting rhythm
+    to the founder.</p>
+  </div>
+</div>
+<div class="job">
+  <div class="when">Apr 2026 to Jun 2026</div>
+  <div>
+    <h3>AI UGC Creator</h3>
+    <div class="org">Miraflores · Remote</div>
+    <p>Built end to end AI UGC pipelines for short form ad and social campaigns: image generation,
+    character consistency, video, AI voice and post production. Developed multi scene content arcs
+    around a locked base identity, and optimised hooks and pacing for retention.</p>
+  </div>
+</div>
+<div class="job">
+  <div class="when">Aug 2023 to Feb 2026</div>
+  <div>
+    <h3>Marketing Virtual Assistant</h3>
+    <div class="org">Nectar AI (TryNectarAI) · Remote</div>
+    <p>Produced AI generated content and published it across Reddit, Instagram, X, TikTok and
+    other platforms. Created and managed multiple branded accounts, grew the communities around
+    them, and converted audience into paid subscribers.</p>
+  </div>
+</div>
+<div class="job">
+  <div class="when">Nov 2022 to Aug 2023</div>
+  <div>
+    <h3>Insurance Agent</h3>
+    <div class="org">Pru Life UK</div>
+    <p>Prospected warm and cold markets, ran client meetings, presented tailored solutions and
+    closed to target. Processed applications, renewals and endorsements.</p>
+  </div>
+</div>
+<div class="job">
+  <div class="when">Jul 2021 to Oct 2021</div>
+  <div>
+    <h3>Technical Facilitator</h3>
+    <div class="org">Kalahi CIDSS · Department of Social Welfare and Development</div>
+    <p>Technical advice and site validation for community sub projects. Reviewed engineering
+    plans, prepared programs of work and cost estimates, and reported weekly on progress.</p>
+  </div>
+</div>
+
+<h2>Stack</h2>
+<dl>
+  <div class="stack-row"><dt>Search and analytics</dt>
+    <dd>Google Search Console, Ahrefs, Google Analytics 4, Google Sheets</dd></div>
+  <div class="stack-row"><dt>AI generation</dt>
+    <dd>Sora 2, Veo, Kling, Seedance, Nano Banana, GPT Image, ElevenLabs</dd></div>
+  <div class="stack-row"><dt>Post production</dt>
+    <dd>CapCut, Topaz, FFmpeg</dd></div>
+  <div class="stack-row"><dt>Platforms</dt>
+    <dd>Reddit, TikTok, Instagram, X, Facebook, Medium, Quora, WordPress</dd></div>
+  <div class="stack-row"><dt>Operations</dt>
+    <dd>Google Workspace, Microsoft Office, AutoCAD</dd></div>
+</dl>
+
+<h2>Education and credentials</h2>
+<div class="job">
+  <div class="when">2010 to 2016</div>
+  <div>
+    <h3>BS Civil Engineering</h3>
+    <div class="org">University of Nueva Caceres, Naga City</div>
+    <p>Licensed Civil Engineer.</p>
+  </div>
+</div>
+
+<h2>Contact</h2>
+<div class="cta">
+  <h3>Available for new projects</h3>
+  <p>Growth, SEO and content work. Happy to walk through any of the case studies above in detail.</p>
+  <a class="btn" href="mailto:orillomichaeljan@gmail.com">orillomichaeljan@gmail.com</a>
+</div>
+
+<footer>© 2026 Michael Jan Orillo</footer>
+
+</div>
+</body>
+</html>
